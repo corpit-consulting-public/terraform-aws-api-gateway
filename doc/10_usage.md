@@ -23,6 +23,8 @@ resource "aws_api_gateway_deployment" "test-deployment" {
 }
 
 ```
-_* The "body" input is used to consume a swagger.yaml file to replicate the configuration of another aws account_
-_* The client certificate resource creates a client gateway certificate automatically for all apigateway rest api_
-_* The api gateway deployment resource is required to use the api gateway stage module_
+ * _The "body" input is used to consume a swagger.yaml file to replicate the configuration of another aws account_
+
+ * _The client certificate resource creates a client gateway certificate automatically for all apigateway rest api_
+
+ * _The api gateway deployment resource is required to use the api gateway stage module_
