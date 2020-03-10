@@ -63,3 +63,6 @@ variable "types" {
   description = "A list of endpoint types. This resource currently only supports managing a single value. Valid values: EDGE, REGIONAL or PRIVATE. If unspecified, defaults to EDGE. Must be declared as REGIONAL in non-Commercial partitions. Refer to the documentation for more information on the difference between edge-optimized and regional APIs"
   default     = []
 }
+
+variable "stage_name" {
+}
