@@ -13,5 +13,17 @@ output "root_resource_id" {
 }
 
 output "deployment_id" {
-  value = "${aws_api_gateway_deployment.Deployment.id}"
+  value = "${aws_api_gateway_deployment.deployment.id}"
+}
+
+####Stage
+
+output "stage_id" {
+  description = "The id of the stage"
+  value       = "${aws_api_gateway_stage.stage.id}"
+}
+
+output "stage_name" {
+  description = "The id of the stage"
+  value       = "${aws_api_gateway_stage.stage.stage_name}"
 }
