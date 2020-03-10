@@ -1,4 +1,4 @@
-# terraform-aws-api-gateway-rest-api
+# terraform-aws-api-gateway
 
 Terraform module that creates and replicates Api Gateways resources on AWS using a Swagger file.
 

@@ -7,20 +7,21 @@ resource "aws_api_gateway_client_certificate" "Certificate" {
 }
 
 module "gw_rest_api" {
-  source         = "./modules/terraform-aws-apigateway-rest-api"
+  source             = "corpit-consulting-public/api-gateway-rest-api/aws"
+  version            = "v2.0.0"
   name           = "${var.name}"
   description    = "${var.description}"
   api_key_source = "${var.api_key_source}"
   body           = "${file("gw-swagger/API-v1-swagger-apigateway.yaml")}"
   types          = ["${var.types}"]
+  stage_name         = "${var.stage_name}"
+  variables      {
+    variable_01 = "${module.module_name.output}"
+    variable_02 = "${var.variable}"
+    variable_03 = "${resource_type.name.output}"
+  }
 }
 
-
-resource "aws_api_gateway_deployment" "test-deployment" {
-  rest_api_id = "${module.gw_rest_api.id}"
-  stage_name  = "Test"
-  
-}
 
 ```
  * _The "body" input is used to consume a swagger.yaml file to replicate the configuration of another aws account_
