@@ -2,6 +2,7 @@
 # terraform-aws-api-gateway
 
 Terraform module that creates and replicates Api Gateways resources on AWS using a Swagger file.
+This module uses the terraform api_gateway_stage, api_gateway_deployment and api_gateway_rest_api resources.
 
 ### Points to consider 
  
@@ -40,6 +41,7 @@ module "gw_rest_api" {
   body           = "${file("gw-swagger/API-v1-swagger-apigateway.yaml")}"
   types          = ["${var.types}"]
   stage_name         = "${var.stage_name}"
+  cache_cluster_size = "${var.cache_cluster_size}"
   variables      {
     variable_01 = "${module.module_name.output}"
     variable_02 = "${var.variable}"
@@ -94,6 +96,7 @@ If you want to update README.md file, run that script while being in 'hooks' fol
 | Name | Description |
 |------|-------------|
 | deployment\_id |  |
+| description | The description of the apigateway rest api |
 | id | The id of the apigateway rest api |
 | name | The name of the apigateway rest api |
 | root\_resource\_id |  |

@@ -15,6 +15,7 @@ module "gw_rest_api" {
   body           = "${file("gw-swagger/API-v1-swagger-apigateway.yaml")}"
   types          = ["${var.types}"]
   stage_name         = "${var.stage_name}"
+  cache_cluster_size = "${var.cache_cluster_size}"
   variables      {
     variable_01 = "${module.module_name.output}"
     variable_02 = "${var.variable}"

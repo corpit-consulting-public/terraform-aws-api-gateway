@@ -1,6 +1,7 @@
 # terraform-aws-api-gateway
 
 Terraform module that creates and replicates Api Gateways resources on AWS using a Swagger file.
+This module uses the terraform api_gateway_stage, api_gateway_deployment and api_gateway_rest_api resources.
 
 ### Points to consider 
  
