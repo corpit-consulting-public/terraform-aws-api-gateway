@@ -169,7 +169,3 @@ variable "rest_api_id" {
   default = ""
 }
 
-variable "deployment_at" {
-  type = "string"
-  default = ""
-}
