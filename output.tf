@@ -8,6 +8,11 @@ output "name" {
   value       = "${aws_api_gateway_rest_api.gateway.name}"
 }
 
+output "description" {
+  description = "The description of the apigateway rest api"
+  value       = "${aws_api_gateway_rest_api.gateway.description}"
+}
+
 output "root_resource_id" {
   value       = "${aws_api_gateway_rest_api.gateway.root_resource_id}"
 }
