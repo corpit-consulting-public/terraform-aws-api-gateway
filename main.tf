@@ -13,6 +13,9 @@ resource "aws_api_gateway_deployment" "deployment" {
   stage_description = "${var.stage_description}"
   rest_api_id       = "${aws_api_gateway_rest_api.gateway.id}"
   stage_name        = "${var.stage_name}"
+  variables        {
+     "deployed_at" = "${timestamp()}"
+  }
 }
 
 resource "aws_api_gateway_stage" "stage" {
