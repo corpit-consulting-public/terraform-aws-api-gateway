@@ -168,3 +168,8 @@ variable "rest_api_id" {
   type    = "string"
   default = ""
 }
+
+variable "deployment_at" {
+  type = "string"
+  default = ""
+}
