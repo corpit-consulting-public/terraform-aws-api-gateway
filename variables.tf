@@ -243,3 +243,8 @@ variable "unauthorized_cache_control_header_strategy" {
   description = "Specifies how to handle unauthorized requests for cache invalidation. The available values are FAIL_WITH_403, SUCCEED_WITH_RESPONSE_HEADER, SUCCEED_WITHOUT_RESPONSE_HEADER."
   default     = ""
 }
+
+variable "version_id" {
+  type    = "string"
+  default = ""
+}
