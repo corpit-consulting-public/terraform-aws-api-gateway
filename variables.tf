@@ -185,57 +185,57 @@ variable "settings" {
 ## Settings
 
 variable "metrics_enabled" {
-  type        = string
+  type        = bool
   description = " Specifies whether Amazon CloudWatch metrics are enabled for this method. (treu or false)"
-  default     = ""
+  default     = "false"
 }
 
 variable "logging_level" {
   type        = string
   description = "Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are OFF, ERROR, and INFO."
-  default     = ""
+  default     = "ERROR"
 }
 
 variable "data_trace_enabled" {
-  type        = string
+  type        = bool
   description = "Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs."
-  default     = ""
+  default     = "false"
 }
 
 variable "throttling_burst_limit" {
-  type        = string
+  type        = number
   description = "Specifies the throttling burst limit."
-  default     = "500"
+  default     = null
 }
 
 variable "throttling_rate_limit" {
-  type        = string
+  type        = number
   description = "Specifies the throttling rate limit."
-  default     = "10000.0"
+  default     = null
 }
 
 variable "caching_enabled" {
-  type        = string
+  type        = bool
   description = "pecifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached."
-  default     = ""
+  default     = "false"
 }
 
 variable "cache_ttl_in_seconds" {
-  type        = string
+  type        = number
   description = "Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached."
-  default     = "300"
+  default     = null
 }
 
 variable "cache_data_encrypted" {
-  type        = string
+  type        = bool
   description = "Specifies whether the cached responses are encrypted."
-  default     = ""
+  default     = "false"
 }
 
 variable "require_authorization_for_cache_control" {
-  type        = string
+  type        = bool
   description = "Specifies whether authorization is required for a cache invalidation request."
-  default     = ""
+  default     = "false"
 }
 
 variable "unauthorized_cache_control_header_strategy" {
